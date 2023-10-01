@@ -1,9 +1,11 @@
-import Header from '@/components/Header/Header'
+import Service from '@/components/Service/Service'
+import HomePage from '../components/Home/HomePage'
 
 export default function Home() {
   return (
     <main>
-      <Header />
+      <HomePage />
+      <Service />
     </main>
   )
 }
