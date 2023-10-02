@@ -1,0 +1,142 @@
+.paddings {
+    padding: 2rem;
+
+}
+
+.r-wrapper,
+.v-wrapper {
+    background: hsl(192, 24%, 96%);
+}
+
+.innerWidth {
+    width: 100%;
+}
+
+.r-container {
+    gap: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.primaryText {
+    color: #1f3e72;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.secondaryText {
+    color: rgb(140 139 139);
+    font-size: 0.9rem;
+}
+
+.orangeText {
+    color: orange;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.r-head {
+    margin-bottom: 2rem;
+}
+
+.swiper-horizontal {
+    overflow: visible;
+}
+
+.r-buttons {
+    position: absolute;
+    gap: 1rem;
+    top: -4rem;
+    right: 0;
+}
+
+.r-buttons button {
+    gap: 5px;
+    font-size: 1.2rem;
+    padding: 0.2rem 0.8rem;
+    color: blue;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.r-buttons>:nth-child(1) {
+
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.25);
+}
+
+.r-buttons>:nth-child(2) {
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.25);
+}
+
+.r-buttons>:nth-child(1):hover,
+.r-buttons>:nth-child(2):hover {
+    background-color: #EEEEFF;
+}
+
+@media (max-width: 640px) {
+    .r-head {
+        align-items: center;
+    }
+
+    .r-buttons {
+        position: initial;
+    }
+}
+
+@media (min-width: 1536px) {
+    .innerWidth {
+        max-width: 1280px;
+        margin: auto;
+    }
+}
+
+@media (min-width: 640px) {
+    .paddings {
+        padding: 4rem;
+    }
+}
+
+@media (min-width: 1280px),
+(min-width: 768px) {
+    .paddings {
+        padding: 2rem;
+    }
+
+    .primaryText {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .primaryText {
+        font-size: 1.5rem;
+    }
+
+    .orangeText {
+        font-size: 1.2rem;
+    }
+}
+
+.flexColCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.button {
+    font-weight: 500;
+    padding: 0.6rem 1.4rem;
+    color: white;
+    background: var(--blue-gradient);
+    border: none;
+    border-radius: 4px;
+    transition: all 300ms ease-in;
+}
+
+.button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}

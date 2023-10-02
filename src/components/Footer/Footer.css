@@ -1,0 +1,233 @@
+.cta {
+    background: linear-gradient(to bottom, hsl(192, 24%, 96%) 50%, hsl(227, 29%, 13%) 50%);
+    /* background-color: hsl(192, 24%, 96%); */
+}
+
+.cta-card {
+    background: hsl(9, 100%, 62%);
+    padding: 50px 25px;
+    box-shadow: 0 16px 32px hsla(188, 63%, 7%, 0.1);
+}
+
+.cta-card .card-content {
+    max-width: max-content;
+    margin-inline: auto;
+    margin-bottom: 30px;
+}
+
+.cta-card .card-title {
+    color: hsl(0, 0%, 100%);
+    line-height: 1.3;
+    margin-bottom: 15px;
+    font-size: 2rem;
+}
+
+button {
+    border: none;
+    background: none;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+}
+
+button,
+a {
+    transition: 0.25 ease;
+}
+
+.cta-card .card-text {
+    color: hsl(0, 0%, 100%);
+    font-size: 1.375rem;
+    line-height: 1.8;
+}
+
+.btn {
+    position: relative;
+    background: hsl(9, 100%, 62%);
+    color: hsl(0, 0%, 100%);
+    font-size: 0.875;
+    text-transform:  capitalize;
+    border: 1px solid hsl(9, 100%, 62%);
+    padding: 10px 20px;
+    z-index: 1;
+}
+
+.cta-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: hsl(0, 0%, 0%);
+    background: hsl(0, 0%, 100%);
+    box-shadow: 0 16px 32px hsla(188, 63%, 7%, 0.1);
+    border-color: hsl(0, 0%, 100%);
+    margin-inline: auto;
+}
+
+.cta-btn:is(:hover, :focus) {
+    background: hsl(0, 0%, 0%);
+    color: hsl(0, 0%, 100%);
+    border-color: transparent;
+}
+
+.cta-btn::before {
+    background: hsl(0, 0%, 0%);
+}
+
+
+
+.footer {
+    background: hsl(227, 29%, 13%);
+    color: hsl(0, 0%, 100%);
+    margin-bottom: 68px;
+}
+
+.footer .container {
+    padding-inline: 30px;
+}
+
+.footer a {
+    color: inherit;
+}
+
+.footer-top {
+    padding-top: 80px;
+    padding-bottom: 40px;
+}
+
+.footer-brand {
+    margin-bottom: 70px;
+}
+
+.footer-brand .logo {
+    margin-bottom: 15px;
+}
+
+.section-text {
+    font-size: 0.875rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    max-width: 45ch;
+}
+
+
+
+.contact-list {
+    display: grid;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.contact-link {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.contact-link ion-icon {
+    font-size: 18px;
+}
+
+.contact-link :is(address, span) {
+    font-size: 0.875rem;
+    transition: 0.25s ease;
+}
+
+.contact-link:is(:hover, :focus) span {
+    color: hsl(9, 100%, 62%);
+}
+
+.social-list {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.footer-list{
+    gap: 20px;
+}
+.footer-list:not(:last-child) {
+    margin-bottom: 50px;
+}
+
+.footer-list-title {
+    font-size: 1.375rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.footer-link {
+    font-size: 0.875rem;
+    padding-block: 10px;
+}
+
+.footer-link:is(:hover, :focus) {
+    color: hsl(9, 100%, 62%);
+}
+
+.footer-bottom {
+    background: hsl(229, 17%, 19%);
+    padding-block: 25px;
+}
+
+.copyright {
+    font-size: 0.875rem;
+    text-align: center;
+}
+
+.copyright a {
+    display: inline-block;
+}
+
+.copyright a:is(:hover, :focus) {
+    color: hsl(9, 100%, 62%);
+}
+
+
+@media (min-width: 600px) {
+    .footer-link-box {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .cta-card {
+        font-size: 1.625rem;
+    }
+
+    .footer {
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: 992px) {
+
+    .cta-card {
+        font-size: 1.875rem;
+        font-size: 1rem;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 50px;
+    }
+
+    .cta-card :is(.card-content, .cta-btn) {
+        margin: 0;
+    }
+
+    .footer-top .container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer-brand {
+        max-width: 300px;
+        margin-bottom: 0;
+    }
+
+    .footer-link-box {
+        flex-basis: 550px;
+    }
+}

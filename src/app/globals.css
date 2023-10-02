@@ -4,6 +4,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+
 }
 
 html {
@@ -53,9 +54,9 @@ a {
 
 
 header {
-    /* background-image: url("../components/image/back.jpg"); */
-    /* background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/max_3840/bf32ea180512873.650bf78c9237c.jpg'); */
-    background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/76cfa3178256009.64e4e8b5f27c9.jpg');
+    /* background-image: url("../components/image/home.jpg"); */
+    background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/max_3840/bf32ea180512873.650bf78c9237c.jpg');
+    /* background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/76cfa3178256009.64e4e8b5f27c9.jpg'); */
     /* background-image: url('https://www.futuristarchitecture.com/wp-content/uploads/2022/02/modern-house-exterior-1.jpg'); */
     background-size: cover;
     background-position: center;
