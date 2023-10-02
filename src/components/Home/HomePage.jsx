@@ -1,6 +1,6 @@
 "use client";
-import React from "react";
-import MenuToggle from "./MenuToggle";
+import React, { useState } from "react";
+import Navbar from "../Navbar/Navbar";
 const HomePage = () => {
   return (
     <header id="home">
@@ -35,34 +35,7 @@ const HomePage = () => {
             </div>
           </div>
           <hr />
-          <nav>
-            <div className="barnd">
-              <h1>Landmark Construction</h1>
-            </div>
-
-            <ul id="menu">
-              <li>
-                <a href="#HOME">HOME</a>
-              </li>
-              <li>
-                <a href="#ABOUT">ABOUT</a>
-              </li>
-              <li>
-                <a href="#Testimonials">TESTIMONIALS</a>
-              </li>
-              <li>
-                <a href="#BLOG">BLOG</a>
-              </li>
-              <li>
-                <a href="#PHOTO">PHOTO</a>
-              </li>
-              <li>
-                <a href="#">CONTACT</a>
-              </li>
-            </ul>
-            <i id="icon" className="fa fa-bars"></i>
-            <MenuToggle />
-          </nav>
+          <Navbar />
 
           <div className="home">
             <h3>EXTERIOR DESIGN COMPANY</h3>

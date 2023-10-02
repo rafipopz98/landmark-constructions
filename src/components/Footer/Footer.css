@@ -1,4 +1,5 @@
 .cta {
+    padding-top: 1rem;
     background: linear-gradient(to bottom, hsl(192, 24%, 96%) 50%, hsl(227, 29%, 13%) 50%);
     /* background-color: hsl(192, 24%, 96%); */
 }

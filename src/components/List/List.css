@@ -1,0 +1,28 @@
+.lists {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    background: hsl(192, 24%, 96%);
+}
+
+.ariticleList {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.uWuButtonsSingle {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    gap: 5px;
+    justify-content: center;
+}
+
+.uWuButtonsSingle button {
+    padding: 10px;
+    font-size: 14px;
+    color: white;
+    background-color: #000;
+    cursor: pointer;
+}

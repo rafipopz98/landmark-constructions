@@ -22,7 +22,7 @@ import Image from "next/image";
 const Value = () => {
   const [className, setClassName] = useState(null);
   return (
-    <section id="value" className="v-wrapper">
+    <section id="about" className="v-wrapper">
       <div className="paddings innerWidth flexCenter v-container">
         {/* left side */}
         <div className="v-left">
