@@ -1,22 +1,21 @@
 "use client";
 import Image from "next/image";
-import React from "react";
 import "./Footer.css";
 
 const Footer = () => {
   return (
     <>
-      <section class="cta">
-        <div class="container">
-          <div class="cta-card">
-            <div class="card-content">
-              <h2 class="h2 card-title">Looking for a dream home?</h2>
+      <section className="cta">
+        <div className="container">
+          <div className="cta-card">
+            <div className="card-content">
+              <h2 className="h2 card-title">Looking for a dream home?</h2>
 
-              <p class="card-text">
+              <p className="card-text">
                 We can help you realize your dream of a new home
               </p>
             </div>
-            <button class="btn cta-btn">
+            <button className="btn cta-btn">
               <span>Explore Properties</span>
               <ion-icon name="arrow-forward-outline"></ion-icon>
             </button>
@@ -27,12 +26,12 @@ const Footer = () => {
         <div className="footer-top">
           <div className="container">
             <div className="footer-brand">
-              <a href="#" className="logo">
-                <img
+              <a href="#" className="logo"> 
+                {/* <Image
                   src="./assets/images/logo-light.png"
-                  alt="Homeverse logo"
-                />
-              </a>
+                  alt="Homeverse logo" width={20} height={20}
+                /> */}
+              </a> 
 
               <p className="section-text">
                 Lorem Ipsum is simply dummy text of the and typesetting

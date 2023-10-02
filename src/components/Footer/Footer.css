@@ -5,6 +5,7 @@
 
 .cta-card {
     background: hsl(9, 100%, 62%);
+    /* background: orange; */
     padding: 50px 25px;
     box-shadow: 0 16px 32px hsla(188, 63%, 7%, 0.1);
 }
@@ -46,7 +47,7 @@ a {
     background: hsl(9, 100%, 62%);
     color: hsl(0, 0%, 100%);
     font-size: 0.875;
-    text-transform:  capitalize;
+    text-transform: capitalize;
     border: 1px solid hsl(9, 100%, 62%);
     padding: 10px 20px;
     z-index: 1;
@@ -141,9 +142,11 @@ a {
     align-items: center;
     gap: 20px;
 }
-.footer-list{
+
+.footer-list {
     gap: 20px;
 }
+
 .footer-list:not(:last-child) {
     margin-bottom: 50px;
 }

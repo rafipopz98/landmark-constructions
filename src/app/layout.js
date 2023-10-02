@@ -1,4 +1,4 @@
-import Footer from "@/components/Footer/Footer";
+import Footer from "../components/Footer/Footer";
 import "./globals.css";
 import { Nunito } from "next/font/google";
 

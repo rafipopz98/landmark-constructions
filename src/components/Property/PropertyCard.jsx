@@ -1,9 +1,10 @@
 import React from "react";
 import "./PropertyCard.css";
+import Image from "next/image";
 const PropertyCard = ({ card }) => {
   return (
     <div className="flexColStart r-card">
-      <img src={card.image} alt="home" />
+      <img src={card.image} alt="home icon" />
       <span className="secondaryText r-price">
         <span style={{ color: "orange" }}>$</span>
         <span>{card.price}</span>
