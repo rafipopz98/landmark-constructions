@@ -1,16 +1,17 @@
-.property-container{
+.deta-wrapper{
     gap: 2rem;
     position: relative;
+    background: hsl(192, 24%, 96%);
 }
 
-.property-container .like{
+.deta-wrapper .like{
     position: absolute;
     top: 3rem;right: 3rem;
     cursor: pointer;
 }
 
 
-.property-container>img{
+.deta-wrapper>img{
     align-self: center;
     max-height: 35rem;
     width: 100%;
@@ -18,18 +19,21 @@
     object-fit: cover;
 }
 
-.property-details{
+.downDetails{
     width: 100%; 
     gap: 2rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     justify-content: space-between;
 }
 
-.property-details>div{
+.downDetails>div{
     flex: 1;
     gap: 1.5rem;
 }
 
-.property-details .left .head{
+.downDetails .left .head{
     justify-content: space-between;
     width: 100%;
 }
@@ -44,18 +48,15 @@
     gap: 0.5rem;
 }
 
-.property-details .button{
-    width: 100%;
-    margin-top: 1rem;
-}
 
-.property-details .button:hover{
+
+.downDetails .button:hover{
     transform: scale(1.05);
 }
 
 
 @media (max-width: 700px) {
-    .property-container>div{
+    .deta-wrapper>div{
         flex-direction: column;
     }
     .head{
@@ -65,7 +66,15 @@
         flex-direction: column;
         align-items: flex-start;
     }
-    .property-details>div{
+    .downDetails>div{
         width: 100%;
     }
+}
+
+
+@media (max-width:930px) {
+    .containerStyles{
+        width: 600px;
+    }
+    
 }

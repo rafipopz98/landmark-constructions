@@ -10,17 +10,18 @@ const Card = ({ item }) => {
       <div className="images_card">
         <img
           alt="image"
-          src={item.image}
+          src={item.images[0]}
           className="mainImage"
           width={280}
           height={400}
+          onClick={()=>router.push(`/project/${item._id}`)}
         />
 
         {/* <Image src={item.img2} className="secondImage"  width={280} height={400}/>  */}
       </div>
       <h2 className="primaryText">{item.name}</h2>
       <div className="prices_cards">
-        <p className="secondaryText">{item.detail}</p>
+        <p className="secondaryText">{item.desc}</p>
       </div>
     </div>
   );

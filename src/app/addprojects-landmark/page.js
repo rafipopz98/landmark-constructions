@@ -9,6 +9,10 @@ import {
   ref,
   uploadBytesResumable,
 } from "firebase/storage";
+import { addProject } from "../../services/project/index";
+
+
+
 const AdminViewAddProduct = () => {
   let name, value;
 
@@ -19,6 +23,7 @@ const AdminViewAddProduct = () => {
     bed: "",
     room: "",
   });
+  const [us, setUs] = useState("");
 
   const inputHandle = (e) => {
     name = e.target.name;
@@ -34,7 +39,7 @@ const AdminViewAddProduct = () => {
 
   const createUniqueFileName = (getFile) => {
     const timeStamp = Date.now();
-    const randomStringValue = Math.random().toString(36).substring(2, 12);
+    const randomStringValue = Math.random().toString(100).substring(2, 12);
 
     return `${getFile.name}-${timeStamp}-${randomStringValue}`;
   };
@@ -49,28 +54,38 @@ const AdminViewAddProduct = () => {
         "state_changed",
         (snapshot) => {},
         (error) => {
-          console.log(error);
+          console.log("Upload error:", error);
           reject(error);
         },
         () => {
           getDownloadURL(uploadImage.snapshot.ref)
-            .then((downloadUrl) => resolve(downloadUrl))
-            .catch((error) => reject(error));
+            .then((downloadUrl) => {
+              console.log("Download URL:", downloadUrl); // Log the download URL
+              setUs(downloadUrl);
+              resolve(downloadUrl);
+              console.log("after resolvinggg URL:", downloadUrl); // Log the download URL
+            })
+            .catch((error) => {
+              console.log("Get download URL error:", error); // Log any getDownloadURL errors
+              reject(error);
+            });
         }
       );
     });
   }
+  console.log(us,"okokokokokokokokokokokokokok")
   const handleImages = async (event) => {
     const files = event.target.files;
     const imageUrls = [];
-  
+
     for (let i = 0; i < files.length; i++) {
       const imageUrl = await helperForUPloadingImageToFirebase(files[i]);
+
       if (imageUrl !== "") {
         imageUrls.push(imageUrl);
       }
     }
-  
+
     if (imageUrls.length > 0) {
       setFormData({
         ...formData,
@@ -78,10 +93,11 @@ const AdminViewAddProduct = () => {
       });
     }
   };
-  
-  const submit = () => {
+
+  const submit = async () => {
     console.log(formData);
     console.log(formData.images);
+    const res = await addProject(formData);
   };
   return (
     <div className="container_addProducts">

@@ -3,7 +3,7 @@ import React from "react";
 import "./List.css";
 import Card from "./Card";
 import data from "../Residence/data.json";
-const List = () => {
+const List = ({data}) => {
   return (
     <div className="lists">
       {data?.map((item, id) => (

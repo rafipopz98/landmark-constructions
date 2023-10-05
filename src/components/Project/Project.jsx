@@ -5,77 +5,59 @@ import { FaShower } from "react-icons/fa";
 import { AiTwotoneCar } from "react-icons/ai";
 import { MdLocationPin, MdMeetingRoom } from "react-icons/md";
 import ImageSlider from "../ImageSlider/ImageSlider";
-import image from "../image/back.jpg";
-const data = {
-  name: "Citralan Puri Serang",
-  price: "35,853",
-  detail:
-    "Massive opportunity to build your dream home at the base of Mummy Mountain in the 3 C's school district. Home is currently updated and very livable if your plans are to build at a later date.* Bonus * to live hillside without hillside restrictions in the town of PV. Run don't walk to capture this needle in a hay stack.",
-  image: "./r3.png",
-};
-const slides = [
-  {
-    title: "Aliva Priva Jardin",
-    image:
-      "https://mir-s3-cdn-cf.behance.net/project_modules/max_3840/bf32ea180512873.650bf78c9237c.jpg",
-  },
-  {
-    title: "Aliva Priva Jardin",
-    image:
-      "https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/76cfa3178256009.64e4e8b5f27c9.jpg",
-  },
-  {
-    title: "Aliva Priva Jardin",
-    image:
-      "https://mir-s3-cdn-cf.behance.net/project_modules/max_3840/bf32ea180512873.650bf78c9237c.jpg",
-  },
-  {
-    title: "Aliva Priva Jardin",
-    image:
-      "https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/76cfa3178256009.64e4e8b5f27c9.jpg",
-  },
-];
-console.log(data.name);
+import Navbar from "../Navbar/Navbar";
+import Slider from "../SLide/Slider";
+import {FaBed} from 'react-icons/fa'
+
 const containerStyles = {
   width: "840px",
-  height: "380px",
-  margin: "6rem auto",
+  height: "480px",
+  margin: "2rem auto",
 };
+
+const slicer=containerStyles.width.split('p')[0];
+console.log(slicer,"help me borooooooooooooooooooooooooooooooooooooo")
 // console.log(data)
-const Project = () => {
+const Project = ({ item }) => {
+  const slides = item.images;
+  console.log("nja ude ulle aca", item);
   return (
     <div className="deta-wrapper">
+    <div className="conn">
+    <Navbar slides={slides}/>
+    </div>
       {/* image */}
-      <div style={containerStyles}>
-        <ImageSlider slides={slides} />
-      </div>
+      {/* <div style={containerStyles} > */}
+        {/* <ImageSlider slides={slides} parentWidth={slicer} /> */}
+      {/* </div> */}
+      
+        <Slider item={item}/>
+      {/* </div> */}
       <div className="downDetails">
-        <h1 className="primaryText">{data.name}</h1>
-        <div className="flexStart facilities">
+        <h1   style={{textAlign:"center",fontSize:"2rem"}} className="primaryText">{item.name}</h1>
+        <div style={{display:"flex"}} className="flexStart facilities">
           {/* bathrooms */}
-          <div className="flexStart facility">
-            <FaShower size={20} color="#1F3E72" />
-            {/* <span>{data?.facilities?.bathrooms} Bathrooms</span> */}
-            <span>2 Bathrooms</span>
-          </div>
+          
           {/* parkings */}
           <div className="flexStart facility">
-            <AiTwotoneCar size={20} color="#1F3E72" />
-            {/* <span>{data?.facilities.parkings} Parking</span> */}
-            <span> Parking</span>
+            <FaBed size={20} color="#1F3E72" />
+            &nbsp; &nbsp;
+            <span>{item?.bed} Bedrooms</span>
+            {/* <span> Parking</span> */}
           </div>
 
           {/* rooms */}
           <div className="flexStart facility">
             <MdMeetingRoom size={20} color="#1F3E72" />
-            <span>3 Room/s</span>
+            &nbsp; &nbsp;
+            <span>{item?.room} </span>
           </div>
         </div>
 
-        <div className="secondaryText" style={{ textAlign: "justify" }}>
-          {data.detail}
+        <div  className="secondaryText" style={{ fontSize:"1.2rem",textAlign: "center",letterSpacing:"2px" }}>
+          {item.desc}
         </div>
-        <button className="button">Book your visit</button>
+        <button style={{padding:"1rem",background:"orange",color:"white"}} className="button">Book your visit</button>
       </div>
     </div>
   );

@@ -1,0 +1,11 @@
+.detailBody{
+    background-color: #f9f9f9;
+    background-size: 350px;
+    background-position: center;
+}
+.detailContainer{
+    margin: 30px auto;
+    width: 95%;
+    max-width: 1024px;
+    background-color: red;
+}
