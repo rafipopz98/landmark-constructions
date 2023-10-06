@@ -10,7 +10,12 @@ const Slider = ({ item }) => {
       <Carousel infiniteLoop autoPlay>
         {item.images.map((item, key) => (
           <div key={key} className="image">
-            <img style={{objectFit:"cover"}} src={item} alt="" effect="blur" />
+            <img
+              style={{ objectFit: "cover" }}
+              src={item}
+              alt=""
+              effect="blur"
+            />
           </div>
         ))}
       </Carousel>

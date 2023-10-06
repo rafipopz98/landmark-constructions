@@ -19,12 +19,12 @@ const slicer = containerStyles.width.split("p")[0];
 console.log(slicer, "help me borooooooooooooooooooooooooooooooooooooo");
 // console.log(data)
 const Project = ({ item }) => {
-  const slides = item.images;
+  // const slides = item.images;
   console.log("nja ude ulle aca", item);
   return (
     <div className="deta-wrapper">
       <div className="conn">
-        <Navbar slides={slides} />
+        <Navbar />
       </div>
       {/* image */}
       {/* <div style={containerStyles} > */}
@@ -33,6 +33,7 @@ const Project = ({ item }) => {
       <div style={{ padding: "2rem" }}>
         <Slider item={item} />
       </div>
+      {/* <img src={item.images[0]} alt="" /> */}
       <div className="downDetails">
         <h1
           style={{ textAlign: "center", fontSize: "2rem" }}
