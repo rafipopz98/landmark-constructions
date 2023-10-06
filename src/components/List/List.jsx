@@ -10,7 +10,7 @@ const List = ({ data }) => {
   const pathName = usePathname();
   const isAdmin = pathName.includes("update-delete");
   return (
-    <div className="lists">
+    <div  className="lists">
       {data?.map((item, id) => (
         <article key={id} className="ariticleList">
           <Card item={item} />

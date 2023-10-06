@@ -15,7 +15,7 @@ import {
 } from "react-icons/md";
 import data from "./Accordion";
 import "./Value.css";
-import back from '../image/back.jpg'
+import back from "../image/back.jpg";
 import Image from "next/image";
 // Demo styles, see 'Styles' section below for some notes on use.
 
@@ -26,13 +26,25 @@ const Value = () => {
       <div className="paddings innerWidth flexCenter v-container">
         {/* left side */}
         <div className="v-left">
-          <div className="image-container">
+          <div
+            data-aos="fade-right"
+            data-aos-easing="ease-in-back"
+            data-aos-delay="100"
+            data-aos-offset="0"
+            className="image-container"
+          >
             <Image src={back} alt="iamge" />
           </div>
         </div>
 
         {/* right */}
-        <div className="flexColStart v-right">
+        <div
+          data-aos="fade-left"
+          data-aos-easing="ease-in-back"
+          data-aos-delay="300"
+          data-aos-offset="0"
+          className="flexColStart v-right"
+        >
           <span className="orangeText">Our Value</span>
 
           <span className="primaryText">Value We Give to You</span>

@@ -11,7 +11,13 @@ const Residencies = () => {
   return (
     <div className="App">
       <div id="residencies" className="r-wrapper">
-        <div className="paddings innerWidth r-container">
+        <div
+          data-aos="fade-zoom-in"
+          data-aos-easing="ease-in-back"
+          data-aos-delay="300"
+          data-aos-offset="0"
+          className="paddings innerWidth r-container"
+        >
           <div className="flexColStart r-head">
             <span className="orangeText">Best Choices</span>
             <span className="primaryText">Popular Residencies</span>

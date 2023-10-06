@@ -24,7 +24,7 @@ export const addProject = async (formData) => {
 export const getAllAdminProjects = async () => {
   try {
     const responses = await fetch(
-      "http://localhost:3000/api/admin/allProjects",
+      "https://landmarkconstructions.vercel.app/api/admin/allProjects",
       {
         method: "GET",
         cache: "no-store",
@@ -42,7 +42,7 @@ export const getAllAdminProjects = async () => {
 export const projectBYYId = async (id) => {
   try {
     const res = await fetch(
-      `http://localhost:3000/api/admin/projectById?id=${id}`,
+      `https://landmarkconstructions.vercel.app/admin/projectById?id=${id}`,
       {
         method: "GET",
         cache: "no-store",

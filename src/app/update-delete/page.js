@@ -7,10 +7,7 @@ const UpdateDelete = async () => {
   return (
     <div className="conn">
       <Navbar />
-      <Suspense fallback={<p>Loadingggg</p>}>
-        {/* @ts-expect-error Async Server Component */}
-        <List data={allAdminProducts && allAdminProducts.data} />
-      </Suspense>
+      <List data={allAdminProducts && allAdminProducts.data} />
     </div>
   );
 };

@@ -43,7 +43,12 @@ const Footer = () => {
 
               <ul className="contact-list">
                 <li>
-                  <a href="#" className="contact-link">
+                  <a
+                    href="https://www.google.com/maps/place/Landmark+construction/@12.7419933,75.4693818,17z/data=!3m1!4b1!4m6!3m5!1s0x3ba4e9a761e83793:0x8198abfc6c572860!8m2!3d12.7419933!4d75.4693818!16s%2Fg%2F11v6_5cw4n?hl=en-IN&entry=ttu"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="contact-link"
+                  >
                     <ion-icon name="location-outline"></ion-icon>
 
                     <address>Kadaba, Near Federal Bank, </address>
@@ -51,13 +56,23 @@ const Footer = () => {
                 </li>
 
                 <li>
-                  <a href="tel:+919740237732" className="contact-link">
+                  <a
+                    href="tel:+919740237732"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="contact-link"
+                  >
                     <ion-icon name="call-outline"></ion-icon>
                     <span>+91 9740237732</span>
                   </a>
                 </li>
                 <li>
-                  <a href="tel:+918105703792" className="contact-link">
+                  <a
+                    href="tel:+918105703792"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="contact-link"
+                  >
                     <ion-icon name="call-outline"></ion-icon>
                     <span>+91 8105703792</span>
                   </a>
@@ -66,6 +81,8 @@ const Footer = () => {
                 <li>
                   <a
                     href="mailto:landmarkgroupco@yahoo.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="contact-link"
                   >
                     <ion-icon name="mail-outline"></ion-icon>
@@ -76,7 +93,6 @@ const Footer = () => {
               </ul>
 
               <ul className="social-list">
-
                 <li>
                   <a href="#" className="social-link">
                     <ion-icon name="logo-twitter"></ion-icon>

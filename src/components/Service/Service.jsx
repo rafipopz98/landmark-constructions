@@ -8,12 +8,21 @@ const Service = () => {
   return (
     <section className="service" id="service">
       <div className="container">
-        <p className="section-subtitle">Our Services</p>
+        <p data-aos="fade-up" className="section-subtitle">
+          Our Services
+        </p>
 
-        <h2 className="h2 section-title">Our Main Focus</h2>
+        <h2 data-aos="fade-up" className="h2 section-title">
+          Our Main Focus
+        </h2>
 
         <ul className="service-list">
-          <li>
+          <li
+            data-aos="fade-up"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine"
+            data-aos-duration="100"
+          >
             <div className="service-card">
               <div className="card-icon">
                 <Image src={s1} alt="Service icon" />
@@ -38,7 +47,12 @@ const Service = () => {
             </div>
           </li>
 
-          <li>
+          <li
+            data-aos="fade-up"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine"
+            data-aos-duration="300"
+          >
             <div className="service-card">
               <div className="card-icon">
                 <Image src={s2} alt="Service icon" />
@@ -63,7 +77,12 @@ const Service = () => {
             </div>
           </li>
 
-          <li>
+          <li
+            data-aos="fade-up"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine"
+            data-aos-duration="500"
+          >
             <div className="service-card">
               <div className="card-icon">
                 <Image src={s3} alt="Service icon" />
@@ -88,7 +107,12 @@ const Service = () => {
             </div>
           </li>
 
-          <li>
+          <li
+            data-aos="fade-up"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine"
+            data-aos-duration="700"
+          >
             <div className="service-card">
               <div className="card-icon">
                 <Image src={s3} alt="Service icon" />
@@ -113,7 +137,12 @@ const Service = () => {
             </div>
           </li>
 
-          <li>
+          <li
+            data-aos="fade-up"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine"
+            data-aos-duration="900"
+          >
             <div className="service-card">
               <div className="card-icon">
                 <Image src={s3} alt="Service icon" />
@@ -124,7 +153,9 @@ const Service = () => {
               </h3>
 
               <p className="card-text">
-              We handle the red tape so you can focus on your dream home. Our team liaises with local and taluq offices to secure the necessary building permissions hassle-free.
+                We handle the red tape so you can focus on your dream home. Our
+                team liaises with local and taluq offices to secure the
+                necessary building permissions hassle-free.
               </p>
 
               <a href="#" className="card-link">
