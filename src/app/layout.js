@@ -20,11 +20,20 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body className={nunito.className}>
-      <GlobalState>
-
-        {children}
-        <Footer />
-      </GlobalState>
+        <GlobalState>
+          {children}
+          <Footer />
+        </GlobalState>
+        <script
+          type="module"
+          src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+          async
+        ></script>
+        <script
+          nomodule
+          src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+          async
+        ></script>
       </body>
     </html>
   );

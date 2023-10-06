@@ -3,21 +3,21 @@ import { MdCancel, MdAnalytics } from "react-icons/md";
 const data = [
   {
     icon: <HiShieldCheck/>,
-    heading: "Best interest rates on the market",
+    heading: "Looking to turn your dream home into reality?",
     detail:
-      "Exercitation in fugiat est ut ad ea cupidatat ut in cupidatat occaecat ut occaecat consequat est minim minim esse tempor laborum consequat esse adipisicing eu reprehenderit enim.",
+      "We specialize in building your dream home while keeping costs in check. Whether you seek a premium, luxury, or affordable design, we bring your vision to life. Your dream home awaits!.",
   },
   {
     icon: <MdCancel />,
-    heading: "Prevent unstable prices",
+    heading: "Dreaming of a premium home on a tight budget?",
     detail:
-      "Exercitation in fugiat est ut ad ea cupidatat ut in cupidatat occaecat ut occaecat consequat est minim minim esse tempor laborum consequat esse adipisicing eu reprehenderit enim.",
+      "We make high-quality, premium houses affordable. Your dream of luxury living, even on a budget, is just a step away. Unleash the possibilities of economical luxury.",
   },
   {
     icon: <MdAnalytics />,
     heading: "Best price on the market",
     detail:
-      "Exercitation in fugiat est ut ad ea cupidatat ut in cupidatat occaecat ut occaecat consequat est minim minim esse tempor laborum consequat esse adipisicing eu reprehenderit enim.",
+      "Look no further; we're your one-stop destination for premium construction services. Unparalleled quality, unmatched service – your dream project, our expertise.",
   },
 ];
 export default data;

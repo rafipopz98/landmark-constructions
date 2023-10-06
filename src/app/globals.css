@@ -295,3 +295,9 @@ header .home .item .item_box:hover img {
         padding: 20px;
     }
 }
+
+.uWULoader{
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;justify-content: center;align-items: center;
+}

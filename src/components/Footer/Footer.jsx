@@ -1,8 +1,10 @@
 "use client";
 import Image from "next/image";
 import "./Footer.css";
-
+import { useRouter } from "next/navigation";
+import logo from "../../../public/logo.png";
 const Footer = () => {
+  const router = useRouter();
   return (
     <>
       <section className="cta">
@@ -16,7 +18,9 @@ const Footer = () => {
               </p>
             </div>
             <button className="btn cta-btn">
-              <span>Explore Properties</span>
+              <span onClick={() => router.push("/projects")}>
+                Explore Properties
+              </span>
               <ion-icon name="arrow-forward-outline"></ion-icon>
             </button>
           </div>
@@ -26,16 +30,15 @@ const Footer = () => {
         <div className="footer-top">
           <div className="container">
             <div className="footer-brand">
-              <a href="#" className="logo"> 
-                {/* <Image
-                  src="./assets/images/logo-light.png"
-                  alt="Homeverse logo" width={20} height={20}
-                /> */}
-              </a> 
+              <a href="#" className="logo">
+                <Image src={logo} alt="Homeverse logo" width={60} height={60} />
+              </a>
 
               <p className="section-text">
-                Lorem Ipsum is simply dummy text of the and typesetting
-                industry. Lorem Ipsum is dummy text of the printing.
+                Unlock the potential of your dream home with our expert 3D
+                architectural exterior design. Transform concepts into reality
+                with precision, creativity, and attention to detail that
+                redefine living spaces.
               </p>
 
               <ul className="contact-list">
@@ -43,36 +46,36 @@ const Footer = () => {
                   <a href="#" className="contact-link">
                     <ion-icon name="location-outline"></ion-icon>
 
-                    <address>Brooklyn, New York, United States</address>
-                  </a> 
+                    <address>Kadaba, Near Federal Bank, </address>
+                  </a>
                 </li>
 
                 <li>
-                  <a href="tel:+0123456789" className="contact-link">
+                  <a href="tel:+919740237732" className="contact-link">
                     <ion-icon name="call-outline"></ion-icon>
- 
-                    <span>+0123-456789</span>
+                    <span>+91 9740237732</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="tel:+918105703792" className="contact-link">
+                    <ion-icon name="call-outline"></ion-icon>
+                    <span>+91 8105703792</span>
                   </a>
                 </li>
 
                 <li>
                   <a
-                    href="mailto:contact@homeverse.com"
+                    href="mailto:landmarkgroupco@yahoo.com"
                     className="contact-link"
                   >
                     <ion-icon name="mail-outline"></ion-icon>
 
-                    <span>contact@homeverse.com</span>
+                    <span>landmarkgroupco@yahoo.com</span>
                   </a>
                 </li>
               </ul>
 
               <ul className="social-list">
-                <li>
-                  <a href="#" className="social-link">
-                    <ion-icon name="logo-facebook"></ion-icon>
-                  </a>
-                </li>
 
                 <li>
                   <a href="#" className="social-link">
@@ -101,15 +104,18 @@ const Footer = () => {
                 </li>
 
                 <li>
-                  <a href="#" className="footer-link">
+                  <a href="#about" className="footer-link">
                     About
                   </a>
                 </li>
 
-
                 <li>
-                  <a href="#" className="footer-link">
-                    All Products
+                  <a
+                    href="#"
+                    onClick={() => router.push("/projects")}
+                    className="footer-link"
+                  >
+                    All Projects
                   </a>
                 </li>
 
@@ -149,7 +155,7 @@ const Footer = () => {
                 </li>
 
                 <li>
-                  <a href="#" className="footer-link">
+                  <a href="#about" className="footer-link">
                     FAQ
                   </a>
                 </li>

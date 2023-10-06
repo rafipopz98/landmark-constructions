@@ -7,7 +7,7 @@ import { MdLocationPin, MdMeetingRoom } from "react-icons/md";
 import ImageSlider from "../ImageSlider/ImageSlider";
 import Navbar from "../Navbar/Navbar";
 import Slider from "../SLide/Slider";
-import {FaBed} from 'react-icons/fa'
+import { FaBed } from "react-icons/fa";
 
 const containerStyles = {
   width: "840px",
@@ -15,29 +15,34 @@ const containerStyles = {
   margin: "2rem auto",
 };
 
-const slicer=containerStyles.width.split('p')[0];
-console.log(slicer,"help me borooooooooooooooooooooooooooooooooooooo")
+const slicer = containerStyles.width.split("p")[0];
+console.log(slicer, "help me borooooooooooooooooooooooooooooooooooooo");
 // console.log(data)
 const Project = ({ item }) => {
   const slides = item.images;
   console.log("nja ude ulle aca", item);
   return (
     <div className="deta-wrapper">
-    <div className="conn">
-    <Navbar slides={slides}/>
-    </div>
+      <div className="conn">
+        <Navbar slides={slides} />
+      </div>
       {/* image */}
       {/* <div style={containerStyles} > */}
-        {/* <ImageSlider slides={slides} parentWidth={slicer} /> */}
+      {/* <ImageSlider slides={slides} parentWidth={slicer} /> */}
       {/* </div> */}
-      <div style={{padding:"2rem"}}>
-        <Slider item={item}/>
+      <div style={{ padding: "2rem" }}>
+        <Slider item={item} />
       </div>
       <div className="downDetails">
-        <h1   style={{textAlign:"center",fontSize:"2rem"}} className="primaryText">{item.name}</h1>
-        <div style={{display:"flex"}} className="flexStart facilities">
+        <h1
+          style={{ textAlign: "center", fontSize: "2rem" }}
+          className="primaryText"
+        >
+          {item.name}
+        </h1>
+        <div style={{ display: "flex" }} className="flexStart facilities">
           {/* bathrooms */}
-          
+
           {/* parkings */}
           <div className="flexStart facility">
             <FaBed size={20} color="#1F3E72" />
@@ -54,10 +59,24 @@ const Project = ({ item }) => {
           </div>
         </div>
 
-        <div  className="secondaryText" style={{ fontSize:"1.2rem",textAlign: "center",letterSpacing:"2px" }}>
+        <div
+          className="secondaryText"
+          style={{
+            fontSize: "1.2rem",
+            textAlign: "center",
+            letterSpacing: "2px",
+          }}
+        >
           {item.desc}
         </div>
-        <button style={{padding:"1rem",background:"orange",color:"white"}} className="button">Book your visit</button>
+        <a href="tel:+919740237732">
+          <button
+            style={{ padding: "1rem", background: "orange", color: "white" }}
+            className="button"
+          >
+            Call Us and Build your Dream House
+          </button>
+        </a>
       </div>
     </div>
   );

@@ -10,7 +10,7 @@ const Service = () => {
       <div className="container">
         <p className="section-subtitle">Our Services</p>
 
-        <h2  className="h2 section-title">Our Main Focus</h2>
+        <h2 className="h2 section-title">Our Main Focus</h2>
 
         <ul className="service-list">
           <li>
@@ -20,16 +20,18 @@ const Service = () => {
               </div>
 
               <h3 className="h3 card-title">
-                <a href="#">Buy a home</a>
+                <a href="#">Planning As Per Vastu</a>
               </h3>
 
               <p className="card-text">
-                over 1 million+ homes for sale available on the website, we can
-                match you with a house you will want to call home.
+                Celebrate our Indian heritage by building in harmony with Vastu
+                principles. Our homes are designed to channel positive vibes,
+                attract prosperity, and nurture well-being. Your peace of mind
+                is our guiding philosophy
               </p>
 
               <a href="#" className="card-link">
-                <span>Find A Home</span>
+                <span>Building Constructions</span>
 
                 <ion-icon name="arrow-forward-outline"></ion-icon>
               </a>
@@ -43,16 +45,18 @@ const Service = () => {
               </div>
 
               <h3 className="h3 card-title">
-                <a href="#">Rent a home</a>
+                <a href="#">Interior Designing</a>
               </h3>
 
               <p className="card-text">
-                over 1 million+ homes for sale available on the website, we can
-                match you with a house you will want to call home.
+                Interior design that breathes life into your spaces. Our
+                meticulous craftsmanship and creativity transform your vision
+                into stunning, functional interiors. Your dream home, our design
+                expertise.
               </p>
 
               <a href="#" className="card-link">
-                <span>Find A Home</span>
+                <span>Find A Design</span>
 
                 <ion-icon name="arrow-forward-outline"></ion-icon>
               </a>
@@ -66,16 +70,65 @@ const Service = () => {
               </div>
 
               <h3 className="h3 card-title">
-                <a href="#">Sell a home</a>
+                <a href="#">Building Constructions</a>
               </h3>
 
               <p className="card-text">
-                over 1 million+ homes for sale available on the website, we can
-                match you with a house you will want to call home.
+                Elevate your dream structure with our meticulous construction
+                services. Our expert builders and state-of-the-art technology
+                ensure quality and precision in every brick. Your vision, our
+                commitment.
               </p>
 
               <a href="#" className="card-link">
-                <span>Find A Home</span>
+                <span>Explore More</span>
+
+                <ion-icon name="arrow-forward-outline"></ion-icon>
+              </a>
+            </div>
+          </li>
+
+          <li>
+            <div className="service-card">
+              <div className="card-icon">
+                <Image src={s3} alt="Service icon" />
+              </div>
+
+              <h3 className="h3 card-title">
+                <a href="#">Consultancy</a>
+              </h3>
+
+              <p className="card-text">
+                Unlock your dream home&apos;s potential with expert guidance.
+                Our seasoned consultants are your trusted partners in realizing
+                a home that&apos;s uniquely yours, from blueprint to finishing
+                touches.
+              </p>
+
+              <a href="#" className="card-link">
+                <span>Contact Us</span>
+
+                <ion-icon name="arrow-forward-outline"></ion-icon>
+              </a>
+            </div>
+          </li>
+
+          <li>
+            <div className="service-card">
+              <div className="card-icon">
+                <Image src={s3} alt="Service icon" />
+              </div>
+
+              <h3 className="h3 card-title">
+                <a href="#">Building Permission</a>
+              </h3>
+
+              <p className="card-text">
+              We handle the red tape so you can focus on your dream home. Our team liaises with local and taluq offices to secure the necessary building permissions hassle-free.
+              </p>
+
+              <a href="#" className="card-link">
+                <span>Ping Us</span>
 
                 <ion-icon name="arrow-forward-outline"></ion-icon>
               </a>
