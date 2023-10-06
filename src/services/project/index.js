@@ -24,7 +24,7 @@ export const addProject = async (formData) => {
 export const getAllAdminProjects = async () => {
   try {
     const responses = await fetch(
-      "https://landmarkconstructions.netlify.app/api/admin/allProjects",
+      "https://landmarkconstructions.vercel.app/api/admin/allProjects",
       {
         method: "GET",
         cache: "no-store",
@@ -33,7 +33,7 @@ export const getAllAdminProjects = async () => {
     const data = await responses.json();
     return data;
   } catch (e) {
-    console.log(`the errrror ${e}`);
+    console.log(`the errrror ${e}`); 
   }
 };
 
@@ -42,7 +42,7 @@ export const getAllAdminProjects = async () => {
 export const projectBYYId = async (id) => {
   try {
     const res = await fetch(
-      `https://landmarkconstructions.netlify.app/admin/projectById?id=${id}`,
+      `https://landmarkconstructions.vercel.app/admin/projectById?id=${id}`,
       {
         method: "GET",
         cache: "no-store",
