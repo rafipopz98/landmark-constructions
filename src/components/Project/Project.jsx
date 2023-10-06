@@ -30,9 +30,9 @@ const Project = ({ item }) => {
       {/* <div style={containerStyles} > */}
         {/* <ImageSlider slides={slides} parentWidth={slicer} /> */}
       {/* </div> */}
-      
+      <div style={{padding:"2rem"}}>
         <Slider item={item}/>
-      {/* </div> */}
+      </div>
       <div className="downDetails">
         <h1   style={{textAlign:"center",fontSize:"2rem"}} className="primaryText">{item.name}</h1>
         <div style={{display:"flex"}} className="flexStart facilities">

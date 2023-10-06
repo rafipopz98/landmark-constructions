@@ -54,3 +54,44 @@ export const projectBYYId = async (id) => {
     console.log("errrorr while reading productBYCategory", e);
   }
 };
+
+//deleete
+
+export const deleteProduct = async (id) => {
+  try {
+    const res = await fetch(`/api/admin/deleteProject?id=${id}`, {
+      method: "DELETE",
+      headers: {
+        // Authorization: `Bearer ${Cookies.get("token")}`,
+      },
+    });
+
+    const data = await res.json();
+
+    return data;
+  } catch (e) {
+    console.log(e);
+  }
+};
+
+//update
+
+export const updateProject = async (formData) => {
+  try {
+    const res = await fetch("/api/admin/updateProject", {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+        // Authorization: `Bearer ${Cookies.get("token")}`,
+      },
+      cache: "no-store",
+      body: JSON.stringify(formData),
+    });
+
+    const data = await res.json();
+
+    return data;
+  } catch (e) {
+    console.log(e);
+  }
+};

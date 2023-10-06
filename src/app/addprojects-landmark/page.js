@@ -9,9 +9,13 @@ import {
   ref,
   uploadBytesResumable,
 } from "firebase/storage";
-import { addProject } from "../../services/project/index";
-
-
+import { addProject, updateProject } from "../../services/project/index";
+import Navbar from "@/components/Navbar/Navbar";
+import { GlobalContext } from "@/context";
+import { toast } from "react-toastify";
+import ComponentLevelLoader from "@/components/Loader/componentLevel";
+import Notification from "@/components/Notification";
+import { useRouter } from "next/navigation";
 
 const AdminViewAddProduct = () => {
   let name, value;
@@ -39,7 +43,7 @@ const AdminViewAddProduct = () => {
 
   const createUniqueFileName = (getFile) => {
     const timeStamp = Date.now();
-    const randomStringValue = Math.random().toString(100).substring(2, 12);
+    const randomStringValue = Math.random().toString(36).substring(2, 12);
 
     return `${getFile.name}-${timeStamp}-${randomStringValue}`;
   };
@@ -73,7 +77,7 @@ const AdminViewAddProduct = () => {
       );
     });
   }
-  console.log(us,"okokokokokokokokokokokokokok")
+  console.log(us, "okokokokokokokokokokokokokok");
   const handleImages = async (event) => {
     const files = event.target.files;
     const imageUrls = [];
@@ -93,14 +97,51 @@ const AdminViewAddProduct = () => {
       });
     }
   };
+  const {
+    componentLevelLoader,
+    setComponentLevelLoader,
+    currentUpdatedProduct,
+    setCurrentUpdatedProduct,
+  } = useContext(GlobalContext);
+  console.log("abe yaar", currentUpdatedProduct);
+
+  useEffect(() => {
+    if (currentUpdatedProduct !== null) setFormData(currentUpdatedProduct);
+  }, [currentUpdatedProduct]);
+  const router = useRouter();
 
   const submit = async () => {
+    setComponentLevelLoader({ loading: true, id: "" });
     console.log(formData);
     console.log(formData.images);
-    const res = await addProject(formData);
+    const resp =
+      currentUpdatedProduct !== null
+        ? await updateProject(formData)
+        : await addProject(formData);
+    if (resp.success) {
+      setComponentLevelLoader({ loading: false, id: "" });
+      toast.success(resp.message, {
+        position: toast.POSITION.TOP_RIGHT,
+      });
+      setTimeout(() => {
+        router.push("/update-delete");
+        router.refresh();
+      }, 1000);
+    } else {
+      setComponentLevelLoader({ loading: false, id: "" });
+      console.log("error");
+      toast.error(resp.message, {
+        position: toast.POSITION.TOP_RIGHT,
+      });
+    }
+    console.log("dddd ", resp);
   };
+  console.log(currentUpdatedProduct, "kokokokkok dfjgkhj");
   return (
     <div className="container_addProducts">
+      <div className="conn">
+        <Navbar />
+      </div>
       <input
         // accept="image"
         name="image"
@@ -144,7 +185,24 @@ const AdminViewAddProduct = () => {
         placeholder="1bhk/2bhk/3bhk...."
         onChange={inputHandle}
       />
-      <button onClick={submit}>Add Product</button>
+      <button onClick={submit}>
+        {componentLevelLoader && componentLevelLoader.loading ? (
+          <ComponentLevelLoader
+            text={
+              currentUpdatedProduct !== null
+                ? "Updating Product"
+                : "Adding Product"
+            }
+            color={"#ffffff"}
+            loading={componentLevelLoader && componentLevelLoader.loading}
+          />
+        ) : currentUpdatedProduct !== null ? (
+          "Update Product"
+        ) : (
+          "Add Product"
+        )}
+      </button>
+      <Notification />
     </div>
   );
 };

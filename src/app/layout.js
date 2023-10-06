@@ -1,3 +1,4 @@
+import GlobalState from "@/context";
 import Footer from "../components/Footer/Footer";
 import "./globals.css";
 import { Nunito } from "next/font/google";
@@ -19,8 +20,11 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body className={nunito.className}>
+      <GlobalState>
+
         {children}
         <Footer />
+      </GlobalState>
       </body>
     </html>
   );

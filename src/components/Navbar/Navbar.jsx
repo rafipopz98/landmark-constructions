@@ -1,10 +1,20 @@
 "use client";
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./Navbar.css";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
+import { GlobalContext } from "@/context";
 const Navbar = () => {
+  const { currentUpdatedProduct, setCurrentUpdatedProduct } =
+    useContext(GlobalContext);
   const router = useRouter();
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const pathName = usePathname();
+  const undo = pathName.includes("addprojects-landmark");
+  console.log(currentUpdatedProduct, "nabarrr");
+  useEffect(() => {
+    if (!undo && currentUpdatedProduct !== null) setCurrentUpdatedProduct(null);
+  }, [pathName]);
 
   // const toggleMenu = () => {
   //   setMenuOpen(!menuOpen);

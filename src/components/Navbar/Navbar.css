@@ -14,6 +14,13 @@
     color: black;
 }
 
+.span_component{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+
 .conn nav {
     display: flex;
     justify-content: space-between;
