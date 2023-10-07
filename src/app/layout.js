@@ -3,13 +3,14 @@ import Footer from "../components/Footer/Footer";
 import "./globals.css";
 import { Nunito } from "next/font/google";
 
+
+// export const metadata = {
+//   title: "Landmark Constructions",
+//   description: "Transforming spaces into places",
+//   icons: [{ rel: "icon", url: logo }],
+// };
 const nunito = Nunito({ subsets: ["latin"] });
 
-export const metadata = {
-  title: "Landmark Constructions",
-  description: "Transforming spaces into places",
-  icons: [{ rel: "icon", url: logo }],
-};
 import logo from "../../public/logo.png";
 export default function RootLayout({ children }) {
   return (

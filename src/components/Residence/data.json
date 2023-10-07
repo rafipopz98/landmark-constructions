@@ -1,38 +1,38 @@
 [
     {
-      "name": "Aliva Priva Jardin",
+      "name": "Moedern Villa",
       "price": "47,043",
-      "detail": "Jakarta Garden City Street, Cakung. Pulo Gadung, Jakarta Timur, DKI Jakarta",
-      "image": "./r1.png"
+      "detail": "2floor 4bhk 5bedrooms",
+      "image": "https://firebasestorage.googleapis.com/v0/b/landmark-e0fc4.appspot.com/o/ecommerce%2FU2.webp-1696590393369-tgbndkie4p?alt=media&token=3f1c0923-0998-4c2e-9f3b-f00c3b508eb0"
     },
     {
-      "name": "Asatti Garden City",
+      "name": "Heritage Villa",
       "price": "66,353",
-      "detail": "Pahlawan Street XVII No.215, Cinangka, Sawangan, Depok, Jawa Barat",
-      "image": "./r2.png"
+      "detail": "2floor 4bhk 5bedrooms",
+      "image": "https://firebasestorage.googleapis.com/v0/b/landmark-e0fc4.appspot.com/o/ecommerce%2FFRONT%20VIE.webp-1696590696487-lrm8jsugzu?alt=media&token=cb00a2a5-3c3d-4b6b-bcbe-896031ae6890"
     },
     {
-      "name": "Citralan Puri Serang",
+      "name": "Vintage Villa",
       "price": "35,853",
-      "detail": "Ruko Puri Indah Residence Block A7, Lingkar Street, Ciracas, Serang, Banten",
-      "image": "./r3.png"
+      "detail": "Vintage Villa with Parking slots",
+      "image": "https://firebasestorage.googleapis.com/v0/b/landmark-e0fc4.appspot.com/o/ecommerce%2FB.webp-1696591935707-93gjzv0k4w?alt=media&token=a41d5eb1-218c-49b1-9e5a-6bfd5b7688b3"
     },
     {
-      "name": "Aliva Priva Jardin",
+      "name": "Moedern Villa",
       "price": "47,043",
-      "detail": "Jakarta Garden City Street, Cakung. Pulo Gadung, Jakarta Timur, DKI Jakarta",
-      "image": "./r1.png"
+      "detail": "2floor 4bhk 5bedrooms",
+      "image": "https://firebasestorage.googleapis.com/v0/b/landmark-e0fc4.appspot.com/o/ecommerce%2FU2.webp-1696590393369-tgbndkie4p?alt=media&token=3f1c0923-0998-4c2e-9f3b-f00c3b508eb0"
     },
     {
-      "name": "Asatti Garden City",
+      "name": "Heritage Villa",
       "price": "66,353",
-      "detail": "Pahlawan Street XVII No.215, Cinangka, Sawangan, Depok, Jawa Barat",
-      "image": "./r2.png"
+      "detail": "2floor 4bhk 5bedrooms",
+      "image": "https://firebasestorage.googleapis.com/v0/b/landmark-e0fc4.appspot.com/o/ecommerce%2FFRONT%20VIE.webp-1696590696487-lrm8jsugzu?alt=media&token=cb00a2a5-3c3d-4b6b-bcbe-896031ae6890"
     },
     {
-      "name": "Citralan Puri Serang",
+      "name": "Vintage Villa",
       "price": "35,853",
-      "detail": "Ruko Puri Indah Residence Block A7, Lingkar Street, Ciracas, Serang, Banten",
-      "image": "./r3.png"
+      "detail": "Vintage Villa with Parking slots",
+      "image": "https://firebasestorage.googleapis.com/v0/b/landmark-e0fc4.appspot.com/o/ecommerce%2FB.webp-1696591935707-93gjzv0k4w?alt=media&token=a41d5eb1-218c-49b1-9e5a-6bfd5b7688b3"
     }
   ]
