@@ -3,6 +3,8 @@ import Project from "@/components/Project/Project";
 import { projectBYYId } from "@/services/project";
 import React from "react";
 
+
+
 const page = async ({ params }) => {
   const productDetailsParams = await projectBYYId(params.details);
   // return <Detail />;
@@ -10,3 +12,8 @@ const page = async ({ params }) => {
 };
 
 export default page;
+
+export const metadata = { 
+  title: `{ierui}`,
+  description: "Transforming spaces into places",
+}; 
