@@ -1,0 +1,104 @@
+/* styles.css */
+
+/* Reset some default styles */
+*{
+  margin: 0;
+  padding: 0;
+  font-family: Arial;
+  /* background-color: #007BFF; */
+}
+
+/* Style the body with the new background image */
+body {
+  height: 100vh;
+  width: 100vw;
+
+  /* Set the height of the body to cover the viewport */
+}
+.uWu{
+  background-image: url('https://thumbs.dreamstime.com/b/horizontal-pattern-seamless-ribbon-border-medical-equipment-doodle-style-isolated-white-background-vector-outline-172935190.jpg');
+  background-position: center;
+  object-fit: cover;
+  background-repeat: no-repeat;
+}
+
+/* Style the container */
+.container {
+  /* width: 100%; */
+  max-width: 400px;
+  margin: 100px auto 30px;
+  /* Adjusted margin for better alignment */
+  /* min-height: 100vh; */
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #d49696;
+  border-radius: 10px;
+  background-color: #F0F8FF;
+  /* Light Blue background color */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  /* Add a subtle box shadow */
+}
+
+/* Style the heading */
+h2 {
+  color: #007BFF;
+  /* Blue heading color */
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+/* Style the form */
+#registerForm {
+  text-align: left;
+  margin-top: 20px;
+  /* Adjusted margin for the form */
+}
+
+/* Style form elements */
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  width: 97%;
+  padding: 7px;
+  margin-bottom: 16px;
+  border: 1px solid #007BFF;
+  /* Blue border */
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s ease-in-out;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus {
+  border-color: #1a313c;
+  /* Darker blue on focus */
+}
+
+/* Style the submit button */
+button[type="submit"] {
+  background-color: #007BFF;
+  /* Blue submit button */
+  color: #fff;
+  padding: 14px 24px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button[type="submit"]:hover {
+  background-color: #03458c;
+  /* Darker blue on hover */
+}
+
+/* Style the link for login */
+p a {
+  text-decoration: none;
+  color: #007BFF;
+}
+
+p a:hover {
+  text-decoration: underline;
+}
