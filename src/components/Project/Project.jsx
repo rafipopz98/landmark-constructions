@@ -8,6 +8,7 @@ import ImageSlider from "../ImageSlider/ImageSlider";
 import Navbar from "../Navbar/Navbar";
 import Slider from "../SLide/Slider";
 import { FaBed } from "react-icons/fa";
+import * as fbq from '../../../lib/fpixel'
 
 const containerStyles = {
   width: "840px",
@@ -18,6 +19,10 @@ const containerStyles = {
 const slicer = containerStyles.width.split("p")[0];
 console.log(slicer, "help me borooooooooooooooooooooooooooooooooooooo");
 // console.log(data)
+const handleClick = () => {
+  fbq.event('contact now from details page', { currency: 'USD', value: 10 })
+}
+
 const Project = ({ item }) => {
   // const slides = item.images;
   console.log("nja ude ulle aca", item);
@@ -70,7 +75,7 @@ const Project = ({ item }) => {
         >
           {item.desc}
         </div>
-        <a href="tel:+919740237732">
+        <a href="tel:+919740237732" onClick={handleClick}>
           <button
             style={{ padding: "1rem", background: "orange", color: "white" }}
             className="button"

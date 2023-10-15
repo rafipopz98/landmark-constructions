@@ -1,7 +1,23 @@
 "use client";
 import React, { useState } from "react";
 import Navbar from "../Navbar/Navbar";
+import * as fbq from "../../../lib/fpixel";
 const HomePage = () => {
+  const handleClick = () => {
+    fbq.event("contact u from mail", { currency: "USD", value: 10 });
+  };
+  const handleClick2 = () => {
+    fbq.event("tried to call u from navbar (9740237732)", {
+      currency: "USD",
+      value: 10,
+    });
+  };
+  const handleClick3 = () => {
+    fbq.event("tried to call u from navbar (8105703792)", {
+      currency: "USD",
+      value: 10,
+    });
+  };
   return (
     <header id="home">
       <div className="container_content">
@@ -37,16 +53,18 @@ const HomePage = () => {
               </a>
             </div>
             <div className="box">
-              <a href="mailto:landmarkgroupco@yahoo.com">
+              <a href="mailto:landmarkgroupco@yahoo.com" onClick={handleClick}>
                 <i className="fa fa-envelope"></i>
-                <label>landmarkgroupco@yahoo.com</label>
+                <label style={{ cursor: "pointer" }}>
+                  landmarkgroupco@yahoo.com
+                </label>
               </a>
+              <a href="tel:+919740237732" onClick={handleClick2}>
               <i className=" fa fa-phone"></i>
-              <a href="tel:+919740237732">
-                <label>+91 9740237732</label>
+                <label style={{ cursor: "pointer" }}>+91 9740237732</label>
               </a>
-              <a href="tel:+918105703792">
-                <label>+91 8105703792</label>
+              <a href="tel:+918105703792" onClick={handleClick3}>
+                <label style={{ cursor: "pointer" }}>+91 8105703792</label>
               </a>
             </div>
           </div>
