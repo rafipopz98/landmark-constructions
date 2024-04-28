@@ -189,7 +189,7 @@ const Footer = () => {
         <div className="footer-bottom">
           <div className="container">
             <p className="copyright">
-              &copy; 2023 <a href="#">Mohan Thilak</a>. All Rights Reserved
+              &copy; 2023 <a href="#">Muhammad Rafi</a>. All Rights Reserved
             </p>
           </div>
         </div>
